@@ -47,21 +47,11 @@ public class MainActivity extends AppCompatActivity {
 //        mPaint.setStrokeWidth(6);
 //        mCanvas.drawLine(100,150,400,150,mPaint);
 
+        //Todo: This was made for android with 1080p resolution, other resolution may have different result
+
         //SUN
         mPaint.setColor(Color.YELLOW);
         mCanvas.drawCircle(900,300,100,mPaint);
-
-        //BUSH LEFT
-        mPaint.setColor(Color.GREEN);
-        RectF rectf=new RectF();
-        rectf.set(100,900,300,1000);
-        mCanvas.drawOval(rectf,mPaint);
-
-        //BUSH RIGHT
-        mPaint.setColor(Color.GREEN);
-        RectF rectf2=new RectF();
-        rectf2.set(800,900,1000,1000);
-        mCanvas.drawOval(rectf2,mPaint);
 
         //BASE WALL
         mPaint.setColor(Color.DKGRAY);
@@ -90,7 +80,17 @@ public class MainActivity extends AppCompatActivity {
         mPaint.setColor(Color.RED);
         mCanvas.drawPath(path,mPaint);
 
+        //BUSH LEFT
+        mPaint.setColor(Color.GREEN);
+        RectF rectf=new RectF();
+        rectf.set(100,900,400,1000);
+        mCanvas.drawOval(rectf,mPaint);
 
+        //BUSH RIGHT
+        mPaint.setColor(Color.GREEN);
+        RectF rectf2=new RectF();
+        rectf2.set(700,900,1000,1000);
+        mCanvas.drawOval(rectf2,mPaint);
 
         view.invalidate();
     }
